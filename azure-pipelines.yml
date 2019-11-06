@@ -12,7 +12,7 @@ variables:
   azureSubscription: '2ac6e8b3-4464-4a6f-b232-5aa59a543796'
 
   # Function app name
-  functionAppName: ''
+  functionAppName: 'dailyNews'
  
   # Environment name
   environmentName: ''
