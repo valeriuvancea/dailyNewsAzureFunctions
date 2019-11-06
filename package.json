@@ -1,0 +1,27 @@
+{
+  "name": "testFunctionAppAzure",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "prestart": "npm run build && func extensions install",
+    "start:host": "func start",
+    "start": "npm run start:host & npm run watch",
+    "build:production": "npm run prestart && npm prune --production",
+    "test": "echo \"No tests yet...\""
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@azure/functions": "^1.0.2-beta2",
+    "typescript": "^3.3.3",
+    "@types/express": "^4.17.2",
+    "@types/node": "^12.12.5",
+    "express": "^4.17.1",
+    "ts-node-dev": "^1.0.0-pre.43",
+    "mssql": "^5.1.0",
+    "@types/mssql": "^4.3.1",
+    "dotenv": "^8.2.0",
+    "rss-parser": "^3.7.3"
+  }
+}
