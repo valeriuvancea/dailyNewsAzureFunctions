@@ -15,7 +15,7 @@ variables:
   functionAppName: 'dailyNews'
  
   # Environment name
-  environmentName: ''
+  environmentName: 'dailyNews'
  
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
