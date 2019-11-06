@@ -2,6 +2,7 @@ import { AzureFunction, Context, HttpRequest } from "@azure/functions"
 import executeQuery from "../tools/sqlWorker";
 import * as sql from "mssql";
 import isNaturalNumber from "../tools/naturalNumberVerification"
+import errors from "../tools/errors";
 
 const httpTrigger: AzureFunction = async function (context: Context, req: HttpRequest): Promise<void> {
     const userId: string = req.params.userId;
@@ -22,7 +23,7 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
             }
             else {
                 context.res = {
-                    body: { error: "There are no categories!" },
+                    body: { error: errors.noCategories },
                     status: 404
                 };
             }
@@ -30,7 +31,7 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
     }
     else {
         context.res = {
-            body: { error: "userId field provided is not a natural number bigger then 0!" },
+            body: { error: errors.userIdIsNotANaturalNumber },
             status: 412
         };
     }

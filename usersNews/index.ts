@@ -1,7 +1,8 @@
 import { AzureFunction, Context, HttpRequest } from "@azure/functions"
 import executeQuery from "../tools/sqlWorker";
 import * as sql from "mssql";
-import isNaturalNumber from "../tools/naturalNumberVerification"
+import isNaturalNumber from "../tools/naturalNumberVerification";
+import errors from "../tools/errors";
 const Parser = require('rss-parser');
 const parser = new Parser();
 
@@ -42,7 +43,7 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
 
                     if (error !== undefined) {
                         context.res = {
-                            body: { error: "Rss parser error: " + error },
+                            body: { error: errors.rssParserError + error },
                             status: 500
                         };
                     }
@@ -64,15 +65,15 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
             }
             else {
                 context.res = {
-                    body: { error: "There is no user with the given ID or the user doesn't have any categories assigned" },
-                    status: 500
+                    body: { error: errors.noUserWithIdOrUserWith0Categories},
+                    status: 404
                 };
             }
         }
     }
     else {
         context.res = {
-            body: { error: "userId field provided is not a natural number bigger then 0!" },
+            body: { error: errors.userIdIsNotANaturalNumber },
             status: 500
         };
     }
