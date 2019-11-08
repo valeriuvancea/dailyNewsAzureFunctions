@@ -120,3 +120,22 @@ OR
 {
     "error": "errorString"
 }
+
+GET: /categories : get categories list
+response example:
+[
+  {
+    "categoryId": 1,
+    "name": "Sport",
+    "rssLink": "http://www.sportingnews.com/us/rss"
+  },
+  {
+    "categoryId": 3,
+    "name": "Fashion",
+    "rssLink": "https://www.elle.com/rss/all.xml/"
+  }
+]
+OR
+{
+    "error": "errorString"
+}
