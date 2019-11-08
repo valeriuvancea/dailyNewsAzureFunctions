@@ -8,7 +8,7 @@
       "methods": [
         "get"
       ],
-      "route": "users/{userId:int}/categories"
+      "route": "categories/{userId:int}"
     },
     {
       "type": "http",
@@ -16,5 +16,5 @@
       "name": "res"
     }
   ],
-  "scriptFile": "../dist/usersCategories/index.js"
+  "scriptFile": "../dist/categoriesForUser/index.js"
 }

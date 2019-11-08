@@ -53,7 +53,7 @@ OR
     "error": "errorString"
 }
 
-GET: /users/userID/categories : get user's with userID categories
+GET: /categories/userID : get categories list and links with user with userID for each category
 response example:
 [
     {
