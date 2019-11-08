@@ -10,6 +10,8 @@ const errors = {
     rssParserError: "Rss parser error: ",
     noUserWithIdOrUserWith0Categories: "There is no user with the given ID or the user doesn't have any categories assigned",
     categoryNotCreated: "Category not created!",
-    nameAndRssLinkNotProvided: "name and rssLink fields not provided!"
+    nameAndRssLinkNotProvided: "name and rssLink fields not provided!",
+    categoryNotDeleted: "Category not deleted!",
+    categoryIdIsNotANaturalNumber: "categoryId field provided is not a natural number!",
 };
 export default errors;

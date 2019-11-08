@@ -165,3 +165,17 @@ OR
 {
     "error": "errorString"
 }
+
+DELETE: /categories/categoryId : delete category with id if it exists
+response example:
+{
+    "recordsets": [],
+    "output": {},
+    "rowsAffected": [
+        1
+    ]
+}
+OR
+{
+    "error": "errorString"
+}
