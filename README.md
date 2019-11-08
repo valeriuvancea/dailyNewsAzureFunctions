@@ -139,3 +139,29 @@ OR
 {
     "error": "errorString"
 }
+
+POST: /categories : create category
+response example:
+{
+  "recordsets": [
+    [
+      {
+        "categoryId": 1
+      }
+    ]
+  ],
+  "recordset": [
+    {
+      "categoryId": 1
+    }
+  ],
+  "output": {},
+  "rowsAffected": [
+    1,
+    1
+  ]
+}
+OR
+{
+    "error": "errorString"
+}
