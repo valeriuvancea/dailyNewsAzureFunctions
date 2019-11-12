@@ -19,7 +19,7 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
         }
         else {
             if (sqlQueryResponse.recordset.length > 0) {
-                context.res.body = sqlQueryResponse;
+                context.res.body = sqlQueryResponse.recordset;
             }
             else {
                 context.res = {
